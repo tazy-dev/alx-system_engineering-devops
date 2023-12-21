@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# print a Best School 10 times using until loop
+# print Hi instead of Best School in the 9th line
+
+i=0
+
+while [[ i -lt 10 ]]; do
+  echo "Best School"
+
+  if [[ i -eq 8 ]]; then
+    echo "Hi"
+  fi
+
+  ((i++))
+done
