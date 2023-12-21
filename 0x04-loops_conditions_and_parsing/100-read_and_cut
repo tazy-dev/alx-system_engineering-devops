@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#A Bash script that displays the content the following fields of the file /etc/passwd.
+#username
+#user id
+#Home directory path for the user
+
+#Password file path
+pass="/etc/passwd"
+
+#setting the internal field seprator to Null
+# read -r treats the \ as a normal char
+while IFS= read -r line; do
+  echo "$line" | cut -d ':' -f 1,3,6
+done < "$pass"
